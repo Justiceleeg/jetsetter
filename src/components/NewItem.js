@@ -17,11 +17,9 @@ class NewItem extends Component {
     const { value } = this.state;
 
     event.preventDefault();
-
     addItem(value)
 
     this.setState({ value: ''})
-    // Reset the state of the component.
   };
 
   render() {

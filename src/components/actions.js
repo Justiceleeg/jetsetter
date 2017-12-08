@@ -25,3 +25,9 @@ export const removeItem = (item) => {
         item
     })
 };
+
+export const markAllAsPacked = () => {
+    AppDispatcher.dispatch({
+        type: 'MARK_ALL_AS_PACKED'
+    })
+};

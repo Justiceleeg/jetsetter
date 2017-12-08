@@ -14,11 +14,8 @@ class Application extends Component {
     items: ItemStore.getItems()
   };
 
-  markedAllAsPacked = () => {
-    // const items = this.state.items.map(item => {
-    //   return { ...item, packed: false}
-    // })
-    // this.setState({ items });
+  markAllAsUnpacked = () => {
+    ItemStore.markAllAsUnpacked();
   }
 
   updateItems = () => {
@@ -45,7 +42,7 @@ class Application extends Component {
         <CountDown />
         <Items title="Unpacked Items" items={unpackedItems}/>
         <Items title="Packed Items" items={packedItems} />
-        <button className="button full-width" onClick={this.markedAllAsPacked}>Mark All As Unpacked</button>
+        <button className="button full-width" onClick={this.markAllAsUnpacked}>Mark All As Unpacked</button>
       </div>
     );
   }

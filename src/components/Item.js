@@ -11,6 +11,7 @@ class Item extends Component {
   handleRemove = () => {
     removeItem(this.props.item);
   }
+  
   render() {
     const { item } = this.props;
     return (
